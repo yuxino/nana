@@ -4,11 +4,13 @@
   "private": true,
   "description": "Find your avatar in a crowd.",
   "scripts": {
-    "start": "python3 -m http.server 8080 --directory dist",
+    "start": "npm run dev",
     "check": "node --check dist/app.js && prettier --check dist/app.js dist/index.html dist/styles.css README.md",
-    "format": "prettier --write dist/app.js dist/index.html dist/styles.css README.md"
+    "format": "prettier --write dist/app.js dist/index.html dist/styles.css README.md",
+    "dev": "serve dist --listen 8080"
   },
   "devDependencies": {
-    "prettier": "3.6.2"
+    "prettier": "3.6.2",
+    "serve": "14.2.6"
   }
 }

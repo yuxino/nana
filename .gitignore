@@ -5,5 +5,3 @@
 !package-lock.json
 !dist/
 !dist/**
-!.openai/
-!.openai/hosting.json

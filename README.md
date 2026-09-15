@@ -14,13 +14,20 @@
 
 ## 本地运行
 
-需要 Python 3，在项目目录运行：
+需要 Node.js 18 或更新版本，在项目目录运行：
 
 ```sh
-python3 -m http.server 8080 --directory dist
+npm ci
+npm run dev
 ```
 
 打开 http://localhost:8080 。请通过本地服务打开，直接双击 HTML 可能受到浏览器图片跨域限制。
+
+也可以直接运行：
+
+```sh
+npx serve dist --listen 8080
+```
 
 页面不需要构建，`dist/` 中的文件就是可部署的静态网站。
 
@@ -30,7 +37,6 @@ python3 -m http.server 8080 --directory dist
 - `dist/styles.css`：样式及手机布局。
 - `dist/app.js`：头像获取、网格识别、图片匹配及定位交互。
 - `dist/assets/`：默认头像墙及示例头像。
-- `.openai/hosting.json`：Sites 部署配置，不包含密钥。
 
 可选的格式和语法检查：
 
@@ -47,4 +53,4 @@ npm run check
 
 默认头像墙来自 [klarkxy01 的公开帖子](https://x.com/klarkxy01/status/2099859110892384501)，示例头像来自 [vvnuds](https://x.com/vvnuds)。图片及头像权利归各自权利人所有。
 
-页面 Q 版艾薇娜使用 OpenAI 内置图片生成工具，参考用户提供的头像创作；保留灰紫长发、蓝眼睛、猫耳、粉色发夹与水手服特征，使用透明背景。
+页面 Q 版艾薇娜参考原头像创作，保留灰紫长发、蓝眼睛、猫耳、粉色发夹与水手服特征。
