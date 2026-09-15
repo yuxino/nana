@@ -866,3 +866,25 @@ header {
     height: 90px;
   }
 }
+
+.site-footer {
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 10px 42px 22px;
+  text-align: right;
+}
+.site-footer a {
+  color: #99998b;
+  font-size: 11px;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #555548;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 860px) {
+  .site-footer {
+    padding: 8px 22px 22px;
+  }
+}
