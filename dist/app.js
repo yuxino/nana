@@ -46,7 +46,24 @@ function distance(a, b) {
 function thumbnail(r) {
   const c = document.createElement("canvas");
   c.width = c.height = 108;
-  c.getContext("2d").drawImage(wall, r.x, r.y, r.w, r.h, 0, 0, 108, 108);
+  const context = c.getContext("2d");
+  // The wall background is visible around each rounded avatar. Clip it out
+  // of the preview without changing the matching crop or source image.
+  const inset = Math.min(r.w, r.h) * 0.025;
+  context.beginPath();
+  context.arc(54, 54, 54, 0, Math.PI * 2);
+  context.clip();
+  context.drawImage(
+    wall,
+    r.x + inset,
+    r.y + inset,
+    r.w - inset * 2,
+    r.h - inset * 2,
+    0,
+    0,
+    108,
+    108,
+  );
   return c.toDataURL("image/png");
 }
 function clearResult() {

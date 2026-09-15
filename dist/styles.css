@@ -888,3 +888,32 @@ header {
     padding: 8px 22px 22px;
   }
 }
+
+.candidate {
+  padding: 7px 9px;
+  gap: 10px;
+}
+.candidate img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: transparent;
+}
+.candidate span {
+  color: #454539;
+  font-size: 12px;
+  font-weight: 500;
+}
+@media (max-width: 860px) {
+  .candidate {
+    padding: 7px;
+    gap: 8px;
+  }
+  .candidate img {
+    width: 34px;
+    height: 34px;
+  }
+  .candidate span {
+    font-size: 12px;
+  }
+}
