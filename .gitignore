@@ -1,5 +1,8 @@
 *
 !.gitignore
+!README.md
+!package.json
+!package-lock.json
 !dist/
 !dist/**
 !.openai/

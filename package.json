@@ -1,0 +1,14 @@
+{
+  "name": "nana-avatar-finder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Find your avatar in a crowd.",
+  "scripts": {
+    "start": "python3 -m http.server 8080 --directory dist",
+    "check": "node --check dist/app.js && prettier --check dist/app.js dist/index.html dist/styles.css README.md",
+    "format": "prettier --write dist/app.js dist/index.html dist/styles.css README.md"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}
